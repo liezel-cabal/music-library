@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <script>
+        // This function loads the XML file and applies the XSLT transformation
+        function loadXML() {
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Get the XML document
+                    const xmlDoc = this.responseXML;
+                    
+                    // Load the XSLT file
+                    const xslhttp = new XMLHttpRequest();
+                    xslhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            // Get the XSLT document
+                            const xslDoc = this.responseXML;
+                            
+                            // Perform the transformation
+                            if (window.XSLTProcessor) {
+                                // For modern browsers
+                                const xsltProcessor = new XSLTProcessor();
+                                xsltProcessor.importStylesheet(xslDoc);
+                                const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+                                document.getElementById("result").appendChild(resultDocument);
+                            } else if (typeof xmlDoc.transformNode !== "undefined") {
+                                // For older IE browsers
+                                document.getElementById("result").innerHTML = xmlDoc.transformNode(xslDoc);
+                            }
+                        }
+                    };
+                    xslhttp.open("GET", "music.xsl", true);
+                    xslhttp.send();
+                }
+            };
+            xmlhttp.open("GET", "music.xml", true);
+            xmlhttp.send();
+        }
+
+        // Load the XML when the page loads
+        window.onload = loadXML;
+    </script>
+</head>
+<body>
+    <div id="result">
+        <!-- The transformed content will be inserted here -->
+    </div>
+</body>
+</html>
