@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<music>
+    <song id="1">
+        <songTitle>As It Was</songTitle>
+        <artist>Harry Styles</artist>
+        <debutYear>2022</debutYear>
+        <albums>
+            <album>Harry's House</album>
+            <album>Fine Line</album>
+            <album>Live on Tour</album>
+        </albums>
+    </song>
+    <song id="2">
+        <songTitle>Anti-Hero</songTitle>
+        <artist>Taylor Swift</artist>
+        <debutYear>2022</debutYear>
+        <albums>
+            <album>Midnights</album>
+            <album>The Aylor Swift Collectionp</album>
+            <album>Greatest Hits 2023</album>
+        </albums>
+    </song>
+    <song id="3">
+        <songTitle>505</songTitle>
+        <artist>Arctic Monkeys</artist>
+        <debutYear>2002</debutYear>
+        <albums>
+            <album>AM</album>
+            <album>Favourite Worst Nightmare</album>
+            <album>Suck It and See</album>
+        </albums>
+    </song>
+    <song id="4">
+        <songTitle>kill Bill</songTitle>
+        <artist>SZA</artist>
+        <debutYear>2022</debutYear>
+        <albums>
+            <album>SOS</album>
+            <album>Ctrl (Deluxe)</album>
+            <album>RB Hits 2023</album>
+        </albums>
+    </song>
+    <song id="5">
+        <songTitle>Creepin'</songTitle>
+        <artist>The weeknd</artist>
+        <debutYear>2022</debutYear>
+        <albums>
+            <album>HERPOES VILLIANS</album>
+            <album>The Weeknd Essentials</album>
+            <album>Trap Hits 2023</album>
+        </albums>
+    </song>
+    <song id="6">
+        <songTitle>Flowers</songTitle>
+        <artist>Miley Cyrus</artist>
+        <debutYear>2023</debutYear>
+        <albums>
+            <album>Summer Vacation</album>
+            <album>Best of Miley Cyrus</album>
+            <album>Pop Anthems 2023</album>
+        </albums>
+    </song>
+</music>
